@@ -1,0 +1,5 @@
+stepDefinitions/web/HomeStep.class
+stepDefinitions/mobile/HomeStepAndroid.class
+stepDefinitions/mobile/LoginStepAndroid.class
+stepDefinitions/web/LoginStep.class
+cucumberOptions/TestRunner.class

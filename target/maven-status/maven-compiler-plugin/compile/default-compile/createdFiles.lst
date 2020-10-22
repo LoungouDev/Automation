@@ -1,0 +1,7 @@
+pageobjects/web/HomePage.class
+core/Base.class
+pageobjects/mobile/HomePageMobile.class
+core/Hooks.class
+pageobjects/web/LoginPage.class
+pageobjects/mobile/loginPageMobile.class
+core/BaseMobile.class
