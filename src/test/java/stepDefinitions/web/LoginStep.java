@@ -16,11 +16,11 @@ public class LoginStep extends Base {
 
     //WebDriver driver = getDriver();
 
-    public static final String  CONNECTEZ_VOUS = "Connectez-vous";
+    private static final String  CONNECTEZ_VOUS = "Connectez-vous";
 
 
     @Given("^Je Navigue vers le site \"([^\"]*)\"$")
-    public void je_navigue_vers_le_site(String strArg1) throws Throwable {
+    public void navigateSite(String strArg1) throws Throwable {
         driver = initializeDriver();
         driver.get(strArg1);
         HomePage homePage = new HomePage(driver);
@@ -31,7 +31,7 @@ public class LoginStep extends Base {
     }
 
     @When("^Je clique sur connexion$")
-    public void je_clique_sur_login() throws Throwable {
+    public void cliqueLogin() throws Throwable {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         homePage.accept.click();
@@ -42,13 +42,13 @@ public class LoginStep extends Base {
     }
 
     @Then("^Le captcha affiche$")
-    public void le_captcha_affiche() throws Throwable {
+    public void captchaFile() throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         wait.until(ExpectedConditions.visibilityOf(loginPage.captcha));
     }
 
     @And("^Je saisis \"([^\"]*)\" et \"([^\"]*)\"$")
-    public void je_saisis_login_et_mot_de_passe(String strArg1, String strArg2) throws Throwable {
+    public void saisiLoginPasswd(String strArg1, String strArg2) throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login.sendKeys(strArg1);
         loginPage.passwd.sendKeys(strArg2);
@@ -56,7 +56,7 @@ public class LoginStep extends Base {
     }
 
     @And("^Je clique sur login$")
-    public void je_clique_login() throws Throwable {
+    public void CliqueLogin() throws Throwable {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.btnlogin.click();
 

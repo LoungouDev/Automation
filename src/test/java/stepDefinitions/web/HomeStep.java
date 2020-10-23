@@ -11,13 +11,13 @@ public class HomeStep extends Base {
     public static final String PREMIUM_TEXT = "Vos émotions méritent d'avoir leur musique.";
 
     @When("^Je ferme le popin$")
-    public void je_ferme_le_popin() throws Throwable {
+    public void fermePopin() throws Throwable {
         HomePage homePage = new HomePage(driver);
         homePage.accept.click();
     }
 
     @Then("^Le bouton connexion est affiché$")
-    public void bouton_connexion() throws Throwable {
+    public void boutonConnexion() throws Throwable {
         HomePage homePage = new HomePage(driver);
         Assert.assertTrue(homePage.connexion.isDisplayed());
     }
