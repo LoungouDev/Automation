@@ -3,3 +3,6 @@
 .classpath
 .jar
 .idea
+.settings
+.project
+web.iml
