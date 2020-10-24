@@ -1,20 +1,18 @@
 package core;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.cucumber.java.After;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-
-import static org.openqa.selenium.remote.CapabilityType.PLATFORM_NAME;
 
 public class BaseMobile {
 	public static WebDriver driver;
@@ -32,5 +30,10 @@ public class BaseMobile {
 		wait = new WebDriverWait(driver, 30);
 		return driver;
 	}
+	public void getScreenshot(String result) throws IOException
+	{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("/Users/drakker/eclipse-workspace/web/Screenshots/mobile/"+result+"screenshot.png"));
 
+	}
 }
