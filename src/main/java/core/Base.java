@@ -2,13 +2,9 @@ package core;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -63,7 +59,7 @@ return driver;
 public void getScreenshot(String result) throws IOException
 {
 	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(src, new File("C://test//"+result+"screenshot.png"));
+	FileUtils.copyFile(src, new File("/Users/drakker/eclipse-workspace/web/Screenshots/web/"+result+"screenshot.png"));
 	
 }
 

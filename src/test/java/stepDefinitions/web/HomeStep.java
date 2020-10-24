@@ -14,6 +14,7 @@ public class HomeStep extends Base {
     public void fermePopin() throws Throwable {
         HomePage homePage = new HomePage(driver);
         homePage.accept.click();
+        getScreenshot("homepage");
     }
 
     @Then("^Le bouton connexion est affiché$")

@@ -24,6 +24,7 @@ public class HomeStepAndroid extends BaseMobile {
     @Given("^Je lance application Deezer$")
     public void lancerApp() throws Throwable {
         Assert.assertTrue(appHomePageMobile.connexion.isDisplayed());
+        getScreenshot("home_mobile");
     }
 
     @Given("^La home page s'affiche correctement$")
