@@ -13,7 +13,7 @@ public class HomePageMobile extends BaseMobile {
 
     @AndroidFindBy(id = "welcome_log_in_btn")
     public MobileElement connexion;
-
+//commentaire
     public HomePageMobile(WebDriver driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
