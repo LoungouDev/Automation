@@ -11,7 +11,7 @@ public class HomeStep extends Base {
     public static final String PREMIUM_TEXT = "Vos émotions méritent d'avoir leur musique.";
 
     @When("^Je ferme le popin$")
-    public void fermePopin() throws Throwable {
+    public void fermePopin() throws Throwable  {
         HomePage homePage = new HomePage(driver);
         homePage.accept.click();
         getScreenshot("homepage");
